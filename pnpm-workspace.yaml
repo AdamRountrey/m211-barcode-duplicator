@@ -1,0 +1,5 @@
+allowBuilds:
+  '@firebase/util': false
+storeDir: .pnpm-store
+cacheDir: .pnpm-cache
+verifyDepsBeforeRun: false

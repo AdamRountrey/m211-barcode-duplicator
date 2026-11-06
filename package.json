@@ -1,0 +1,26 @@
+{
+  "name": "m211-barcode-copy",
+  "version": "0.3.1",
+  "private": true,
+  "description": "Standalone scan-to-print Code 128 barcode duplicator for the Brady M211",
+  "main": "main.cjs",
+  "scripts": {
+    "prepare:sdk": "node scripts/prepare-sdk.cjs",
+    "start": "electron .",
+    "check": "node --check main.cjs && node --check preload.cjs && node --check renderer.js && node --check barcode.js && node --check scan-queue.js && node --check sdk-media.js && node --check leading-space.js && node --check duplicate-history.js && node --check scripts/prepare-sdk.cjs && node --check scripts/build-windows.cjs",
+    "test": "node --test tests/*.test.js",
+    "package:win": "node scripts/build-windows.cjs --stage-only",
+    "build:win": "node scripts/build-windows.cjs"
+  },
+  "type": "module",
+  "packageManager": "pnpm@11.25.0",
+  "engines": { "node": ">=24.12.0" },
+  "dependencies": {
+    "@bradycorporation/brady-web-sdk": "3.3.3",
+    "electron": "45.2.3",
+    "jsbarcode": "3.12.3"
+  },
+  "devDependencies": {
+    "@zxing/library": "0.23.0"
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+.pnpm-cache/
+.pnpm-state/
+.electron-cache/
+.app-data/
+logs/
+dist/
+vendor/brady-web-sdk/
+.build-tools/
+.env
+.env.*
+*.log
+*.exe
+*.msi
